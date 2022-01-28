@@ -169,6 +169,7 @@ const Coin = () => {
         </title>
       </Helmet>
       <Header>
+        <button>Back</button>
         <Title>
           {/* state.name이 있으면 state.name 보여주고 */}
           {/* 로딩중이면 "Loading" 보여주고 */}
