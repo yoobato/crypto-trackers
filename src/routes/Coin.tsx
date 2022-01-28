@@ -13,13 +13,25 @@ const Container = styled.div`
 const Header = styled.header`
   height: 10vh;
   display: flex;
+  align-items: center;
+`;
+
+const BackButton = styled(Link)`
+  width: 32px;
+  height: 32px;
+  display: flex;
+  background-color: ${(props) => props.theme.bgColor};
+  border: 2px solid ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.textColor};
   justify-content: center;
   align-items: center;
+  border-radius: 16px;
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   color: ${(props) => props.theme.accentColor};
+  margin-left: 24px;
 `;
 
 const Loader = styled.span`
@@ -169,7 +181,7 @@ const Coin = () => {
         </title>
       </Helmet>
       <Header>
-        <button>Back</button>
+        <BackButton to="/">&larr;</BackButton>
         <Title>
           {/* state.name이 있으면 state.name 보여주고 */}
           {/* 로딩중이면 "Loading" 보여주고 */}
